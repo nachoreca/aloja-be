@@ -1,20 +1,20 @@
-const Property = require('../models/property');
+const property = require('../models/property');
 
 class PropertyService {
   async createProperty(data) {
-    return await Property.create(data);
+    return await property.create(data);
   }
 
   async getProperties() {
-    return await Property.findAll();
+    return await property.findAll();
   }
 
   async getPropertyById(id) {
-    return await Property.findByPk(id);
+    return await property.findByPk(id);
   }
 
   async updateProperty(id, data) {
-    const property = await Property.findByPk(id);
+    const property = await property.findByPk(id);
     if (!property) {
       throw new Error('Property not found');
     }
@@ -22,7 +22,7 @@ class PropertyService {
   }
 
   async deleteProperty(id) {
-    const property = await Property.findByPk(id);
+    const property = await property.findByPk(id);
     if (!property) {
       throw new Error('Property not found');
     }
