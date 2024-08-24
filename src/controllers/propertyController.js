@@ -12,7 +12,8 @@ const errorHandler = require('../utils/errorHandler');
 
 const createPropertyHandler = async (req, res) => {
   try {
-    const property = await createProperty(req.body, req.user.id);
+    // const property = await createProperty(req.body, req.user.id);
+    const property = await createProperty(req.body);
     res.status(201).json(property);
   } catch (error) {
     //errorHandler(res, error);
