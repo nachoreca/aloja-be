@@ -1,4 +1,4 @@
-const property = require('../models/Property');
+const property = require('../models/property');
 
 class PropertyService {
   async createProperty(data) {
