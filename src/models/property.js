@@ -26,7 +26,7 @@ const property = sequelize.define('property', {
   },
   location: {
     type: DataTypes.STRING,
-    allowNull: false
+    allowNull: true
   },
   imageUrl: {
     type: DataTypes.STRING,
@@ -34,6 +34,7 @@ const property = sequelize.define('property', {
   },
   userId: {
     type: DataTypes.UUID,
+    allowNull: true,
     references: {
       model: User,
       key: 'id'
