@@ -23,7 +23,7 @@ const createPropertyHandler = async (req, res) => {
 
 const getAllPropertiesHandler = async (req, res) => {
   try {
-    const properties = await services.getAllProperties;
+    const properties = await services.getProperties;
     res.json(properties);
   } catch (error) {
     //errorHandler(res, error);
